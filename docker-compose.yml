@@ -22,6 +22,14 @@ services:
     - DB_USERNAME=bookstack
     - DB_PASSWORD=${DB_PASSWORD}
     - APP_URL=${APP_URL}
+    - MAIL_DRIVER=smtp
+    - MAIL_HOST=${MAIL_HOST}
+    - MAIL_PORT=587
+    - MAIL_ENCRYPTION=tls
+    - MAIL_USERNAME=${MAIL_USERNAME}
+    - MAIL_PASSWORD=${MAIL_PASSWORD}
+    - MAIL_FROM=${MAIL_FROM}
+    - MAIL_FROM_NAME=${MAIL_FROM_NAME}
     volumes:
     - ${VOLUMES_ROOT_PATH}/uploads:/var/www/bookstack/public/uploads
     - ${VOLUMES_ROOT_PATH}/storage-uploads:/var/www/bookstack/storage/uploads
